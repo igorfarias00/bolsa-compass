@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Locale;
 
 public class Main {
@@ -41,6 +42,9 @@ public class Main {
 
         System.out.printf("%s tem %d anos e ganha R$ %.2f %n", nome, idade, renda);
 
+        System.out.println(Arrays.toString(Locale.getISOCountries()));
+
+        Locale.setDefault(Locale.forLanguageTag("BR"));
 
         System.out.println("Products: ");
         System.out.printf("%s, wich price is $ %.2f %n", product1, price1);
@@ -50,6 +54,8 @@ public class Main {
 
         System.out.printf("Measue with eight decimal places: %.8f %n", measure);
         System.out.printf("Rouded (three decimal places): %.3f %n", measure);
+
+        Locale.setDefault(Locale.US);
         System.out.printf("US decimal point: %.3f", measure);
 
     }

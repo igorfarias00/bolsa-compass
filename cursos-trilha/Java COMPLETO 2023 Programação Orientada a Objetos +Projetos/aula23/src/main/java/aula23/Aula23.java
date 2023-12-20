@@ -1,8 +1,12 @@
+package aula23;
+
 import java.util.Arrays;
 import java.util.Locale;
 
-public class Main {
+public class Aula23 {
     public static void main(String[] args) {
+
+        // Aula 23 ########################################################################
         double x = 10.35784;
 
         String nome = "maria";
@@ -57,6 +61,10 @@ public class Main {
 
         Locale.setDefault(Locale.US);
         System.out.printf("US decimal point: %.3f", measure);
+
+        // Aula 23 ########################################################################
+
+        // Aula 24 ########################################################################
 
     }
 

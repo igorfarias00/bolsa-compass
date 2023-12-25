@@ -39,7 +39,7 @@ public class Aula99 {
         System.out.print("Enter the employe id that will have salary increase: ");
         id = sc.nextInt();
         sc.nextLine();
-        
+
         boolean flag = false;
         int finalId = id;
 
@@ -48,7 +48,6 @@ public class Aula99 {
                 flag = true;
             }
         }
-
 
         if(flag) {
             System.out.print("Enter the percentage: ");
@@ -60,7 +59,7 @@ public class Aula99 {
         }
 
 
-        System.out.println(empregados.stream().filter(empregado -> empregado.getId() == finalId));
+        //System.out.println(empregados.stream().filter(empregado -> empregado.getId() == finalId));
 
         System.out.println("List of employees");
         for (Empregado empregado: empregados) {

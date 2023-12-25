@@ -39,12 +39,25 @@ public class Aula99 {
         System.out.print("Enter the employe id that will have salary increase: ");
         id = sc.nextInt();
         sc.nextLine();
-        System.out.print("Enter the percentage: ");
-        double porcentagem = sc.nextDouble();
-
+        
+        boolean flag = false;
         int finalId = id;
 
-        empregados.stream().filter(empregado -> empregado.getId() == finalId).findFirst().get().incrementoSalario(porcentagem);
+        for (Empregado empregado: empregados) {
+            if (empregado.getId() == finalId){
+                flag = true;
+            }
+        }
+
+
+        if(flag) {
+            System.out.print("Enter the percentage: ");
+            double porcentagem = sc.nextDouble();
+            empregados.stream().filter(empregado -> empregado.getId() == finalId).findFirst().get().incrementoSalario(porcentagem);
+
+        } else {
+            System.out.println("This id does not exist");
+        }
 
 
         System.out.println(empregados.stream().filter(empregado -> empregado.getId() == finalId));

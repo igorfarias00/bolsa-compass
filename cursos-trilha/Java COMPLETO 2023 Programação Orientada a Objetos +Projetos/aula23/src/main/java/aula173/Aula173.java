@@ -48,7 +48,10 @@ public class Aula173 {
             System.out.print("Check-out date (dd/MM/yyyy): ");
             checkOut = sdf.parse(sc.nextLine());
 
-            if (checkIn.before(checkOut)){
+            Date now = new Date();
+            if(checkIn.before(now) || checkOut.before(now)){
+                System.out.println("Error in reservation: Reservation dates for update must be future dates");
+            } else if (checkIn.before(checkOut)){
                reserva1.updateDates(checkIn, checkOut);
 
                 // tempo decorrido em millisegundos apartir de 1 de janeiro de 1970 ate hoje

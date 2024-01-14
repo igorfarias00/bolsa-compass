@@ -5,13 +5,13 @@ import java.util.List;
 
 public class PrintService {
 
-    List<Integer> list = new ArrayList<>();
-    public void addValue(int value){
+    List<Object> list = new ArrayList<>();
+    public void addValue(Object value){
         list.add(value);
 
     }
 
-    public int first(){
+    public Object first(){
         if(list.isEmpty()){
             throw new IllegalStateException("List is empty");
         }
@@ -19,7 +19,7 @@ public class PrintService {
     }
     public void print(){
         System.out.print("Numbers ->");
-        for(int n: list){
+        for(Object n: list){
             System.out.print(" | " + n);
         }
         System.out.println();

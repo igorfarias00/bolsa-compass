@@ -9,7 +9,7 @@ public class Aula238 {
 
         Scanner sc = new Scanner(System.in);
 
-        PrintService ps = new PrintService();
+        PrintService<Integer> ps = new PrintService();
 
         System.out.println("How many values? ");
         int n = sc.nextInt();

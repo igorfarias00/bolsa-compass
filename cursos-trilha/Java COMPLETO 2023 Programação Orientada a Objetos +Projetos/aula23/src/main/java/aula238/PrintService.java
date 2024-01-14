@@ -3,15 +3,15 @@ package aula238;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PrintService {
+public class PrintService<T> {
 
-    List<Object> list = new ArrayList<>();
-    public void addValue(Object value){
+    List<T> list = new ArrayList<>();
+    public void addValue(T value){
         list.add(value);
 
     }
 
-    public Object first(){
+    public T first(){
         if(list.isEmpty()){
             throw new IllegalStateException("List is empty");
         }
@@ -19,7 +19,7 @@ public class PrintService {
     }
     public void print(){
         System.out.print("Numbers ->");
-        for(Object n: list){
+        for(T n: list){
             System.out.print(" | " + n);
         }
         System.out.println();

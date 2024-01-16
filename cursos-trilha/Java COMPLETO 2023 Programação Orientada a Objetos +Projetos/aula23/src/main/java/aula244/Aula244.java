@@ -4,10 +4,11 @@ import aula239.entities.Product;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class Aula244 {
     public static void main(String[] args) {
-        Set<Product> set = new HashSet<>();
+        Set<Product> set = new TreeSet<>();
 
         set.add(new Product("TV", 900.0));
         set.add(new Product("Notebook", 1200.0));

@@ -1,6 +1,6 @@
 package aula244;
 
-import aula239.entities.Product;
+import aula244.entities.Product;
 
 import java.util.HashSet;
 import java.util.Set;
